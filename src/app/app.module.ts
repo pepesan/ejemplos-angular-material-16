@@ -16,6 +16,10 @@ import {MatDividerModule} from "@angular/material/divider";
 import {ImportAngularModule} from "./modules/import-angular/import-angular.module";
 import { CardsComponent } from './components/cards/cards.component';
 import { MyMenuComponent } from './components/my-menu/my-menu.component';
+import { MyFormComponent } from './components/my-form/my-form.component';
+import {MatInputModule} from "@angular/material/input";
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import { MyMenuComponent } from './components/my-menu/my-menu.component';
     MenuComponent,
     HomeComponent,
     CardsComponent,
-    MyMenuComponent
+    MyMenuComponent,
+    MyFormComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
