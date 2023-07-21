@@ -35,18 +35,16 @@
     >
       {{ item.name }}
     </a>
-    <a
-      mat-button
-      [matMenuTriggerFor]="examplesMenu"
-      *ngIf="!shouldShowMenu"
-      aria-label="Examples"
-      aria-haspopup="true"
-      routerLinkActive="active"
-    >Examples</a>
+    <a mat-button [matMenuTriggerFor]="ejemplos" >Ejemplos</a>
+    <mat-menu #ejemplos="matMenu">
+      <a
+        mat-menu-item
+        *ngFor="let item of ejemplosItems"
+        [routerLink]="item.link"
+        routerLinkActive="active"
+      >
+        {{ item.name }}
+      </a>
+    </mat-menu>
   </nav>
-  <mat-menu #examplesMenu="matMenu">
-    <button mat-menu-item [routerLink]="'/example1'">Example 1</button>
-    <button mat-menu-item [routerLink]="'/example2'">Example 2</button>
-    <button mat-menu-item [routerLink]="'/example3'">Example 3</button>
-  </mat-menu>
 </mat-toolbar>

@@ -9,8 +9,18 @@ export class MenuResponsiveComponent implements OnInit{
   menuItems = [
     { name: 'Home', link: '/home' },
     { name: 'About', link: '/about' },
-    { name: 'Botones', link: '/buttons' },
   ];
+  ejemplosItems = [
+    { name: 'Botones', link: '/buttons' },
+    { name: 'Cards', link: '/cards' },
+    { name: 'My Menu', link: '/mymenu' },
+    { name: 'My Form', link: '/myform' },
+    { name: 'LoginForm', link: '/login' },
+    { name: 'My Mat Menu', link: '/matmenu' },
+    { name: 'My Top Menu', link: '/topmatmenu' },
+    { name: 'Usa Componente', link: '/usa' },
+    { name: 'Menu Responsive', link: '/responsive' },
+  ]
 
   shouldShowMenu: boolean = false;
 
