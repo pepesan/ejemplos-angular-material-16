@@ -1,0 +1,31 @@
+import {Component, HostListener, OnInit} from '@angular/core';
+
+@Component({
+  selector: 'app-menu-responsive',
+  templateUrl: './menu-responsive.component.html',
+  styleUrls: ['./menu-responsive.component.scss']
+})
+export class MenuResponsiveComponent implements OnInit{
+  menuItems = [
+    { name: 'Home', link: '/home' },
+    { name: 'About', link: '/about' },
+    { name: 'Botones', link: '/buttons' },
+  ];
+
+  shouldShowMenu: boolean = false;
+
+  ngOnInit() {
+    this.shouldShowMenu = window.innerWidth < 768;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.shouldShowMenu = event.target.innerWidth < 768;
+  }
+
+  onMenuClosed() {
+    // Cerramos el menú programáticamente al hacer clic en un enlace del menú desplegable.
+    const menuTrigger = document.querySelector('.menu-button') as HTMLElement;
+    menuTrigger.click();
+  }
+}

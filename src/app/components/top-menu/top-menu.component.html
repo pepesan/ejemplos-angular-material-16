@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <span>My App</span>
+
+  <!-- Dropdown -->
+  <mat-toolbar-row>
+    <button mat-button [matMenuTriggerFor]="dropdownMenu">Ejemplos</button>
+    <mat-menu #dropdownMenu="matMenu">
+      <button mat-menu-item routerLink="/" routerLinkActive="active">Inicio</button>
+      <button mat-menu-item routerLink="/buttons" routerLinkActive="active">Botones</button>
+      <button mat-menu-item routerLink="/usa" routerLinkActive="active">Usa</button>
+      <button mat-menu-item routerLink="/login" routerLinkActive="active">Login</button>
+      <button mat-menu-item routerLink="/responsive" routerLinkActive="active">Menu Responsive</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

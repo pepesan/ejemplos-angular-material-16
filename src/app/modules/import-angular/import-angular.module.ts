@@ -12,11 +12,16 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelect, MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
+import { DeclaraComponent } from './components/declara/declara.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DeclaraComponent
+  ],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -31,7 +36,9 @@ import {MatInputModule} from "@angular/material/input";
     MatFormFieldModule,
     MatOptionModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule,
+    MatListModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -46,7 +53,10 @@ import {MatInputModule} from "@angular/material/input";
     MatFormFieldModule,
     MatOptionModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule,
+    MatListModule,
+    DeclaraComponent
   ]
 })
 export class ImportAngularModule { }

@@ -20,6 +20,12 @@ import { MyFormComponent } from './components/my-form/my-form.component';
 import {MatInputModule} from "@angular/material/input";
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { MyMatMenuComponent } from './components/my-mat-menu/my-mat-menu.component';
+import {MatListModule} from "@angular/material/list";
+import { TopMenuComponent } from './components/top-menu/top-menu.component';
+import { UsaComponent } from './components/usa/usa.component';
+import { MenuResponsiveComponent } from './components/menu-responsive/menu-responsive.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,12 @@ import {ReactiveFormsModule} from "@angular/forms";
     CardsComponent,
     MyMenuComponent,
     MyFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    MyMatMenuComponent,
+    TopMenuComponent,
+    UsaComponent,
+    MenuResponsiveComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

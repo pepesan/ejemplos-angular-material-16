@@ -1,0 +1,11 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav (click)="closeSidenav()" mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.name }}</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Aquí puedes colocar el contenido principal de la página -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
