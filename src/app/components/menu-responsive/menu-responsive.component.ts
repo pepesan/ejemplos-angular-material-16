@@ -1,9 +1,10 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-menu-responsive',
-  templateUrl: './menu-responsive.component.html',
-  styleUrls: ['./menu-responsive.component.scss']
+    selector: 'app-menu-responsive',
+    templateUrl: './menu-responsive.component.html',
+    styleUrls: ['./menu-responsive.component.scss'],
+    standalone: false
 })
 export class MenuResponsiveComponent implements OnInit{
   menuItems = [

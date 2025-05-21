@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-my-mat-menu',
-  templateUrl: './my-mat-menu.component.html',
-  styleUrls: ['./my-mat-menu.component.scss']
+    selector: 'app-my-mat-menu',
+    templateUrl: './my-mat-menu.component.html',
+    styleUrls: ['./my-mat-menu.component.scss'],
+    standalone: false
 })
 export class MyMatMenuComponent {
   menuItems = [
