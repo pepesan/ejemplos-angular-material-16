@@ -21,6 +21,7 @@ export class MenuResponsiveComponent implements OnInit{
     { name: 'My Top Menu', link: '/topmatmenu' },
     { name: 'Usa Componente', link: '/usa' },
     { name: 'Menu Responsive', link: '/responsive' },
+    { name: 'DataTable', link: '/datatable' },
   ]
 
   shouldShowMenu: boolean = false;
