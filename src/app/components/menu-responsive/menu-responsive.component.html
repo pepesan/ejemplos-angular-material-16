@@ -10,41 +10,44 @@
     *matMenuTrigger="shouldShowMenu ? null : false"
     aria-label="Toggle menu"
     aria-haspopup="true"
-  >
+    >
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu" (closed)="onMenuClosed()">
     <mat-list>
-      <a
-        mat-list-item
-        *ngFor="let item of menuItems"
-        [routerLink]="item.link"
-      >
-        {{ item.name }}
-      </a>
+      @for (item of menuItems; track item) {
+        <a
+          mat-list-item
+          [routerLink]="item.link"
+          >
+          {{ item.name }}
+        </a>
+      }
     </mat-list>
   </mat-menu>
 
   <!-- Menú principal en pantallas grandes -->
   <nav class="main-menu">
-    <a
-      mat-button
-      *ngFor="let item of menuItems"
-      [routerLink]="item.link"
-      routerLinkActive="active"
-    >
-      {{ item.name }}
-    </a>
-    <a mat-button [matMenuTriggerFor]="ejemplos" >Ejemplos</a>
-    <mat-menu #ejemplos="matMenu">
+    @for (item of menuItems; track item) {
       <a
-        mat-menu-item
-        *ngFor="let item of ejemplosItems"
+        mat-button
         [routerLink]="item.link"
         routerLinkActive="active"
-      >
+        >
         {{ item.name }}
       </a>
+    }
+    <a mat-button [matMenuTriggerFor]="ejemplos" >Ejemplos</a>
+    <mat-menu #ejemplos="matMenu">
+      @for (item of ejemplosItems; track item) {
+        <a
+          mat-menu-item
+          [routerLink]="item.link"
+          routerLinkActive="active"
+          >
+          {{ item.name }}
+        </a>
+      }
     </mat-menu>
   </nav>
 </mat-toolbar>
