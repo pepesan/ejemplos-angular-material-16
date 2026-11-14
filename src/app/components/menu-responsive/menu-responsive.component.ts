@@ -1,9 +1,10 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
     selector: 'app-menu-responsive',
     templateUrl: './menu-responsive.component.html',
     styleUrls: ['./menu-responsive.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class MenuResponsiveComponent implements OnInit{
