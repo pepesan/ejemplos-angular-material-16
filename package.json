@@ -7,6 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
+    "test:vitest": "ng run untitled1:test-vitest --watch=false",
+    "test:e2e": "playwright test",
+    "test:e2e:cucumber": "cucumber-js cucumber/navigation.feature --require cucumber/e2e-browser.cjs --require features/steps/e2e/navigation.steps.cjs --format progress",
+    "test:unit:cucumber": "cucumber-js cucumber/responsive-menu.feature --require features/steps/unit/responsive-menu.steps.cjs",
   },
   "private": true,
   "dependencies": {

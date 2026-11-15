@@ -6,8 +6,8 @@
   <button
     mat-icon-button
     class="menu-button"
-    [matMenuTriggerFor]="menu"
-    *matMenuTrigger="shouldShowMenu ? null : false"
+    [matMenuTriggerFor]="shouldShowMenu ? menu : null"
+    [hidden]="!shouldShowMenu"
     aria-label="Toggle menu"
     aria-haspopup="true"
     >
@@ -27,7 +27,7 @@
   </mat-menu>
 
   <!-- Menú principal en pantallas grandes -->
-  <nav class="main-menu">
+  <nav class="main-menu" [hidden]="shouldShowMenu">
     @for (item of menuItems; track item) {
       <a
         mat-button

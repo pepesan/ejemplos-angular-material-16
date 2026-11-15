@@ -83,6 +83,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "codeCoverage": true,
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -99,6 +100,14 @@
             ],
             "scripts": []
           }
+        "test-vitest": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "tsconfig.vitest.json",
+            "include": ["**/*.vitest.ts"],
+            "coverage": true
+          }
+        },
         }
       }
     }
