@@ -20,4 +20,19 @@ describe('MyDataTableComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('paginates the sample rows in pages of five', () => {
+    const rows = () => Array.from(
+      (fixture.nativeElement as HTMLElement).querySelectorAll('tr[mat-row]')
+    );
+    expect(rows()).toHaveSize(5);
+
+    const nextPage = (fixture.nativeElement as HTMLElement)
+      .querySelector('button[aria-label="Next page"]') as HTMLButtonElement;
+    nextPage.click();
+    fixture.detectChanges();
+
+    expect(rows()).toHaveSize(5);
+    expect(rows()[0].textContent).toContain('6');
+  });
 });

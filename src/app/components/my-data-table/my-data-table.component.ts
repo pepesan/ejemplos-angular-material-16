@@ -36,6 +36,7 @@ export class MyDataTableComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
+  // MatPaginator existe tras inicializar la vista; aquí se conecta a la fuente de datos.
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {

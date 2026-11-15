@@ -14,6 +14,7 @@ import {AboutComponent} from "./components/about/about.component";
 import {MyDataTableComponent} from "./components/my-data-table/my-data-table.component";
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'buttons', component: ButtonsComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'usa', component: UsaComponent },
   { path: 'responsive', component: MenuResponsiveComponent },
   { path: 'datatable', component: MyDataTableComponent },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

@@ -13,7 +13,7 @@
     >
     <mat-icon>menu</mat-icon>
   </button>
-  <mat-menu #menu="matMenu" (closed)="onMenuClosed()">
+  <mat-menu #menu="matMenu">
     <mat-list>
       @for (item of menuItems; track item) {
         <a
