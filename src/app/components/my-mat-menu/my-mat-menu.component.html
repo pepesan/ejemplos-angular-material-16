@@ -1,8 +1,8 @@
 <mat-sidenav-container class="container">
-  <mat-sidenav #sidenav (click)="closeSidenav()" mode="side" opened>
+  <mat-sidenav #sidenav mode="side" opened>
     <mat-nav-list>
       @for (item of menuItems; track item) {
-        <a mat-list-item [routerLink]="item.link">{{ item.name }}</a>
+        <a mat-list-item [routerLink]="item.link" (click)="sidenav.close()">{{ item.name }}</a>
       }
     </mat-nav-list>
   </mat-sidenav>

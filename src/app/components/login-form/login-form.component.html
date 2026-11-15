@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm">
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
   <mat-form-field appearance="outline">
     <mat-label>Username</mat-label>
     <input matInput formControlName="username" />
@@ -19,5 +19,8 @@
     }
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
+  <button type="submit" mat-raised-button color="primary">Login</button>
+  @if (loginMessage) {
+    <p role="status">{{ loginMessage }}</p>
+  }
 </form>

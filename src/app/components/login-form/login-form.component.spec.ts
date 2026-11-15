@@ -27,4 +27,18 @@ describe('LoginFormComponent', () => {
     component.loginForm.setValue({ username: 'ada', password: 'secret' });
     expect(component.loginForm.valid).toBeTrue();
   });
+  
+  it('shows a safe validation message on submit without logging credentials', () => {
+    component.loginForm.setValue({ username: 'ada', password: 'secret' });
+    const logSpy = spyOn(console, 'log');
+    const form = (fixture.nativeElement as HTMLElement).querySelector('form')!;
+
+    form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+    fixture.detectChanges();
+
+    const status = (fixture.nativeElement as HTMLElement).querySelector('[role="status"]');
+    expect(status?.textContent).toContain('autenticación no está configurada');
+    expect(status?.textContent).not.toContain('secret');
+    expect(logSpy).not.toHaveBeenCalled();
+  });
 });
