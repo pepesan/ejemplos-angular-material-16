@@ -15,4 +15,5 @@ const meta: Meta<LoginFormComponent> = {
 export default meta;
 type Story = StoryObj<LoginFormComponent>;
 
+// Esta story demuestra la validación del formulario; no realiza autenticación real.
 export const Empty: Story = {};

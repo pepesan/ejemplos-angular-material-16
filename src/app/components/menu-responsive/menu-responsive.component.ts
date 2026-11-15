@@ -37,9 +37,4 @@ export class MenuResponsiveComponent implements OnInit{
     this.shouldShowMenu = isCompactMenu(window.innerWidth);
   }
 
-  onMenuClosed() {
-    // Cerramos el menú programáticamente al hacer clic en un enlace del menú desplegable.
-    const menuTrigger = document.querySelector('.menu-button') as HTMLElement;
-    menuTrigger.click();
-  }
 }
