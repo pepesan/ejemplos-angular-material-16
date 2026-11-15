@@ -1,6 +1,6 @@
 # Untitled1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+This project uses Angular 22 and Angular Material.
 
 ## Development server
 
@@ -14,13 +14,17 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `npm test` — Karma/Jasmine component suite with code coverage in `coverage/`.
+- `npm run test:vitest` — Vitest unit tests built with Angular's Vite test runner; writes coverage to `coverage/`.
+- `npm run test:unit:cucumber` — Cucumber.js unit scenarios for responsive-menu breakpoint logic.
+- `npm run test:e2e` — Playwright browser tests. Install Chromium once with `npx playwright install chromium`.
+- `npm run test:e2e:cucumber` — Cucumber.js scenarios driven by Playwright. Install Chromium once with `npx playwright install chromium`.
+## Storybook
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `npm run storybook` starts Storybook at `http://localhost:6006`.
+- `npm run build-storybook` builds the static Storybook site.
 
 ## Further help
 

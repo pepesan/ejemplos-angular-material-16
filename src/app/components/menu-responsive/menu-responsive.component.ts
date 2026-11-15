@@ -1,9 +1,11 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
+import { isCompactMenu } from './menu-responsive.helpers';
 
 @Component({
     selector: 'app-menu-responsive',
     templateUrl: './menu-responsive.component.html',
     styleUrls: ['./menu-responsive.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class MenuResponsiveComponent implements OnInit{
@@ -27,12 +29,12 @@ export class MenuResponsiveComponent implements OnInit{
   shouldShowMenu: boolean = false;
 
   ngOnInit() {
-    this.shouldShowMenu = window.innerWidth < 768;
+    this.shouldShowMenu = isCompactMenu(window.innerWidth);
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.shouldShowMenu = event.target.innerWidth < 768;
+  @HostListener('window:resize')
+  onResize() {
+    this.shouldShowMenu = isCompactMenu(window.innerWidth);
   }
 
   onMenuClosed() {

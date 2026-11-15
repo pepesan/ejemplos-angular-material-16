@@ -18,6 +18,11 @@
   gap: 16px;
 }
 
+.menu-button[hidden],
+.main-menu[hidden] {
+  display: none;
+}
+
 /* Estilo activo para el enlace seleccionado en el menú principal */
 a.active {
   font-weight: bold;

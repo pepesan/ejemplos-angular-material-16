@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, ChangeDetectionStrategy} from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatPaginator } from '@angular/material/paginator';
@@ -29,6 +29,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   selector: 'app-my-data-table',
   imports: [MatTableModule, MatPaginatorModule],
   templateUrl: './my-data-table.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './my-data-table.component.scss'
 })
 export class MyDataTableComponent {
